@@ -54,3 +54,24 @@ try:
         print(f"json file {file_path} was created ")
 except FileExistsError:
     print("that file already exists!")
+
+
+#write csv file on diff loc
+import json
+import csv
+
+employees = [["name", "age", "job"],
+            ["harshit",18,"manager"],
+            ["vaibhav",22,"airforce"],
+            ["shubhankar",22,"navy"]]
+
+file_path = ("C:/Users/Admin/Desktop/output.csv")
+
+try:
+    with open(file =file_path,mode ="w",newline = "") as file:
+        writer = csv.writer(file)
+        for row in employees:
+            writer.writerow(row)
+        print(f"csv file {file_path} was created ")
+except FileExistsError:
+    print("that file already exists!")
