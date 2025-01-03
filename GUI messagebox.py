@@ -25,7 +25,7 @@ def click():
     #else:
         #print("pasand hona chahiye")
 
-    answer =  messagebox.askyesnocancel(title="ask yes no cancel ", message="do you like coding?")
+    answer =  messagebox.askyesnocancel(title="ask yes no cancel ", message="do you like coding?",icon ='error')
     if(answer == True):
         print("YOU ARE LIKE mE YOU ALSO LIKE CODING")
     elif (answer == False):
@@ -38,4 +38,3 @@ button = Button(window,command = click, text = "click me")
 button.pack()
 
 window.mainloop()
-
