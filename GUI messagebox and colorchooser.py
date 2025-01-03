@@ -38,3 +38,27 @@ button = Button(window,command = click, text = "click me")
 button.pack()
 
 window.mainloop()
+
+
+
+
+# creating colorchooser in python
+
+from tkinter import *
+from tkinter import colorchooser
+
+def click():
+    color = colorchooser.askcolor()
+    print(color)      #this show RBG values then hexadecimal value
+    colorhex = color[1]
+    print(colorhex)
+    window.config(bg = colorhex)
+
+window = Tk()
+window.geometry("420x420")
+button = Button(text = "click for colors", command = click)
+button.pack()
+
+window.mainloop()
+
+
