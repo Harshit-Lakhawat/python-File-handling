@@ -1,0 +1,26 @@
+# grid in tkinter
+# with help of grid we can give the coordinate to put the widgets
+# we cannot use grid and pack together
+
+from tkinter import *
+
+window = Tk()
+
+firstnamelabel = Label(window,text="First name : ",bg="green",width=15 )
+#firstnamelabel.pack()
+firstnamelabel.grid(row = 0, column = 0)
+
+firstnameentry = Entry(window)
+firstnameentry.grid(row=0,column=1)
+
+lastnamelabel = Label(window,text="Last name : " ,bg="blue",width=18).grid(row = 1, column = 0)
+lastnameentry = Entry(window).grid(row = 1,column = 1)
+
+emaillabel = Label(window,text="Email : " ,bg="blue",width=20).grid(row = 2, column = 0)
+emailentry = Entry(window).grid(row = 2,column = 1)
+
+submitbutton = Button(window,text="SUBmit").grid(row = 3,column = 0)
+
+
+window.mainloop()
+window.mainloop()
